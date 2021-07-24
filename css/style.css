@@ -11,18 +11,71 @@ a, button, link, input[type=submit]{
 a{
     text-decoration: none;
 }
+button{
+    min-width: 70px;
+    padding: 7px 10px;
+    background-color: orange;
+    color: white;
+}
+hr{
+    margin: 0;
+}
+.pri-color{
+    color: orangered;
+}
+.dark-cover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
 header{
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
 }
 #header-menu{
-    display: none;
+    display: block;
+}
+.header-menu{
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+.menu-overlay{
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+.header-menu a{
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: rgb(224, 219, 219);
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.header-menu a:hover, .header-menu a:focus{
+    color: #fff;
+}
+.header-menu .closemenubtn{
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 40px;
+    cursor: pointer;
 }
 .top-bar{
     height: 15%;
+    min-height: 90px;
     position: fixed;
     width: 100%;
-    background-color: orange;
+    background-color: orangered;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,54 +104,88 @@ header{
     padding-right: 10px;
     font-size: 16px;
     font-weight: 600;
+    color: white;
 }
 .top-bar-contact-btn button{
-    background-color: lightblue;
+    background-color: #99cccc;
     border: 1px solid gray;
     border-radius: 0 5px 0 5px;
     padding: 15px 12px;
 }
+.header-banner-container{
+    background-image: url(../img/photo1.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
 .header-banner{
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
-    padding: 30px;
+    min-height: 80vh;
+    padding: 90px 30px 30px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.banner-writeup{
-    margin-top: 30%;
+.header-banner p{
+    max-width: 600px;
+    margin-bottom: 25px;
 }
-.banner-writeup p{
+.banner-writeup p, .banner-writeup p span{
     margin-bottom: 15px;
     max-width: 600px;
     font-size: 32px;
     font-weight: 700;
     text-align: center;
+    color: #fcfcfc;
 }
-.cta1, .cta2{
-    margin-bottom: 10px;
+.header-banner-cta{
+    margin-bottom: 20px;
     text-align: center;
 }
-.cta1 button{
+.header-banner-cta button{
     padding: 10px 12px;
+    margin-right: 18px;
+    border-radius: 0;
+    width: 120px;
+}
+#cta-btn1{
     border: 1px solid white;
-    background-color: orange;
-    border-radius: 4px;
-    width: 120px;
+    background-color: orangered;
 }
-.cta2 button{
-    padding: 10px 12px;
-    border: 1px solid orange;
+#cta-btn2{
+    border: 1px solid orangered;
     background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    width: 120px;
 }
-
+#our-solution{
+    background-color: #fcfcfc;
+}
+#get-in-touch-section{
+    background-image: url(../img/photo1.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#what-we-do{
+    background-color: #cccccc;
+}
+#our-customers{
+    background-color: #fcfcfc;
+}
+#why-us{
+    background-color: orange;
+}
+#our-team{
+    background-color: #fcfcfc;
+}
+#latest-news{
+    background-color: #cccccc;
+}
 section{
     width: 100%;
-    min-height: 60vh;
-    padding: 30px;
+    min-height: 50vh;
+    padding: 40px;
 }
 .section-header{
     color: olivedrab;
@@ -114,6 +201,85 @@ section{
     font-size: 18px;
     color: #444444;
 }
+.readmore{
+    color: orange;
+    text-decoration: underline;
+}
+.our-solution-list{
+    list-style-type: disc;
+    padding: 20px;
+}
+.our-solution-list li{
+    margin-bottom: 8px;
+}
+#get-in-touch .section-writeup{
+    text-align: left;
+}
+#get-in-touch .section-writeup span{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+#get-in-touch .section-writeup p{
+    margin-bottom: 10px;
+}
+#get-in-touch .section-writeup p a{
+    color: #444444;
+    text-decoration: none;
+}
+#get-in-touch .section-writeup .send-message-btn{
+    margin-top: 20px;
+    text-align: center;
+}
+#get-in-touch .section-writeup .send-message-btn button{
+    border: 1px solid white;
+    border-radius: 4px;
+}
+#what-we-do .section-writeup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.service-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: 20px;
+    width: 30%;
+    min-height: 100px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    background-color: #fcfcfc;
+}
+.service-card .icon{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.service-card .icon span .fas{
+    color: gray;
+    opacity: 0.7;
+    font-size: 48px;
+}
+.service-card .writeup{
+    width: 100%;
+}
+.service-card .writeup h3{
+    text-align: center;
+}
+.customer-logos{
+    margin-top: 20px;
+}
+
+
+footer{
+    min-height: 60vh;
+    background-color: #1d5191;
+}
+
 
 
 
@@ -128,10 +294,10 @@ section{
         display: none;
     }
     header{
-        height: 70vh;
+        min-height: 70vh;
     }
     section{
-        padding: 20px;
+        padding: 30px;
     }
     .section-header{
         color: olivedrab;
@@ -145,5 +311,25 @@ section{
     }
     .section-writeup p{
         font-size: 16px;
+    }
+    #what-we-do .section-writeup{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .service-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        margin: 20px;
+        width: 90%;
+        max-width: 100%;
+    }
+    .service-card .icon{
+        width: 100%;
+    }
+    .service-card .writeup{
+        width: 100%;
     }
 }
