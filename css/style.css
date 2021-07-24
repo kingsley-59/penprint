@@ -20,6 +20,10 @@ button{
 hr{
     margin: 0;
 }
+p{
+    font-size: 18px;
+    color: #444444;
+}
 .pri-color{
     color: orangered;
 }
@@ -213,9 +217,27 @@ section{
     color: orange;
     text-decoration: underline;
 }
+#our-solution{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+}
+.our-solution-desc{
+    width: 45%;
+}
+.our-solution-img{
+    height: 80vh;
+    width: 45%;
+}
+.our-solution-img img{
+    height: 100%;
+    width: 100%;
+}
 .our-solution-list{
     list-style-type: disc;
-    padding: 20px;
+    padding: 10px 20px;
 }
 .our-solution-list li{
     margin-bottom: 8px;
@@ -342,6 +364,25 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    #our-solution{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+    .our-solution-desc{
+        width: 100%;
+    }
+    .our-solution-img{
+        height: 60vh;
+        width: 80%;
+    }
+    .our-solution-img img{
+        height: 100%;
+        width: 100%;
     }
     .service-card{
         display: flex;
